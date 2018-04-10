@@ -12,6 +12,8 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+//--------------------------------------------
+using System.Text.RegularExpressions;
 
 namespace Ejercicio5
 {
@@ -20,7 +22,7 @@ namespace Ejercicio5
     /// </summary>
     public partial class MainWindow : Window
     {
-        static int desplazamiento = 3; //Se inicia en 3 por defecto
+        static int desplazamiento = 0; //Se inicia en 0 por defecto
 
         public MainWindow()
         {
@@ -58,6 +60,20 @@ namespace Ejercicio5
             {
                 desplazamiento++;
                 tbx_desplazamiento.Text = desplazamiento.ToString();
+            }
+        }
+
+        private void tbx_desplazamiento_PreviewTextInput(object sender, TextCompositionEventArgs e)
+        {
+            Regex regla = new Regex("[0-9]");
+            if (!regla.IsMatch(e.Text))
+            {
+                e.Handled = true;
+            }
+            else 
+            {
+                desplazamiento = int.Parse(e.Text);
+                slb_desplazamiento.Value = int.Parse(e.Text);
             }
         }
     }
