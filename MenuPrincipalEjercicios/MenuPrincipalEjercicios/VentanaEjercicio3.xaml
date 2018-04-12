@@ -1,0 +1,18 @@
+﻿<Window
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" mc:Ignorable="d" 
+        x:Class="MenuPrincipalEjercicios.VentanaEjercicio3"
+        Title="Ejercicio 3" Height="296.269" Width="413.06"
+        ResizeMode="NoResize">
+    <Grid>
+        <Button x:Name="btn_numero" Content="Generar número" HorizontalAlignment="Left" Margin="84,48,0,0" VerticalAlignment="Top" Width="102" Click="btn_numero_Click"/>
+        <CheckBox x:Name="chx" Content="Ver número" HorizontalAlignment="Left" Margin="255,54,0,0" VerticalAlignment="Top" Checked="chx_Checked" IsEnabled="False" Unchecked="chx_Unchecked"/>
+        <TextBox x:Name="txb_resultado" HorizontalAlignment="Left" Height="23" Margin="116,147,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="70" FlowDirection="RightToLeft" RenderTransformOrigin="1.392,0.541" MaxLength="3"/>
+        <Button x:Name="btn_probar" Content="Probar" HorizontalAlignment="Left" Margin="255,147,0,0" VerticalAlignment="Top" Width="75" IsEnabled="False" Click="btn_probar_Click"/>
+        <Label Content="Acierta el número (1-100)" HorizontalAlignment="Left" Margin="41,116,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="lbl_resultado" Content="" HorizontalAlignment="Left" Margin="55,198,0,0" VerticalAlignment="Top" Width="280"/>
+        <Label x:Name="lbl_vernumero" Content="" HorizontalAlignment="Left" Margin="255,74,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.053,-0.077"/>
+
+    </Grid>
+</Window>
