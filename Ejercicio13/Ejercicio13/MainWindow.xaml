@@ -1,0 +1,71 @@
+﻿<Window x:Class="Ejercicio13.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Ejercicio 13" MinHeight="350" MinWidth="525" SizeChanged="Window_SizeChanged_1" Initialized="Window_Initialized_1">
+    <StackPanel>
+        <Menu x:Name="menu">
+            <MenuItem Header="Archivo">
+                <MenuItem Header="Abrir" Click="evento_menu_abrir"/>
+                <MenuItem Header="Guardar" Click="evento_menu_guardar"/>
+                <MenuItem Header="Salir" Click="evento_menu_salir"/>
+            </MenuItem>
+            <MenuItem Header="Edicion">
+                <MenuItem Header="Cortar" Command="Cut"/>
+                <MenuItem Header="Copiar" Command="Copy"/>
+                <MenuItem Header="Pegar" Command="Paste"/>
+            </MenuItem>
+        </Menu>
+        <ToolBar x:Name="herramientas">
+            <!--Tipo letra-->
+            <ComboBox x:Name="cbx_fuentes" Width="100" IsEditable="True" SelectedIndex="0">
+                <ComboBoxItem Content="Arial" Selected="evento_herramientas_fuente"/>
+                <ComboBoxItem Content="Buxton Sketch" Selected="evento_herramientas_fuente"/>
+                <ComboBoxItem Content="Consolas" Selected="evento_herramientas_fuente"/>
+                <ComboBoxItem Content="Comic Sans MS" Selected="evento_herramientas_fuente"/>
+                <ComboBoxItem Content="Magneto" Selected="evento_herramientas_fuente"/>
+                <ComboBoxItem Content="Times New Roman" Selected="evento_herramientas_fuente"/>
+                <ComboBoxItem Content="Verdana" Selected="evento_herramientas_fuente"/>
+                
+            </ComboBox>
+            
+            <!--Color letra-->
+            <Grid x:Name="grd_colores" Margin="20,0,0,0">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+                <Rectangle x:Name="rtg_color1" Fill="Blue" Width="15" Height="15" Grid.Column="0" Grid.Row="0" MouseLeftButtonDown="evento_herramientas_color"/>
+                <Rectangle x:Name="rtg_color2" Fill="Green" Width="15" Height="15" Grid.Column="1" Grid.Row="0" MouseLeftButtonDown="evento_herramientas_color"/>
+                <Rectangle x:Name="rtg_color3" Fill="Red" Width="15" Height="15" Grid.Column="2" Grid.Row="0" MouseLeftButtonDown="evento_herramientas_color"/>
+                <Rectangle x:Name="rtg_color4" Fill="Yellow" Width="15" Height="15" Grid.Column="3" Grid.Row="0" MouseLeftButtonDown="evento_herramientas_color"/>
+                <Rectangle x:Name="rtg_color5" Fill="Black" Width="15" Height="15" Grid.Column="4" Grid.Row="0" MouseLeftButtonDown="evento_herramientas_color"/>
+
+                <Rectangle x:Name="rtg_color6" Fill="Orange" Width="15" Height="15" Grid.Column="0" Grid.Row="1" MouseLeftButtonDown="evento_herramientas_color"/>
+                <Rectangle x:Name="rtg_color7" Fill="Purple" Width="15" Height="15" Grid.Column="1" Grid.Row="1" MouseLeftButtonDown="evento_herramientas_color"/>
+                <Rectangle x:Name="rtg_color8" Fill="Brown" Width="15" Height="15" Grid.Column="2" Grid.Row="1" MouseLeftButtonDown="evento_herramientas_color"/>
+                <Rectangle x:Name="rtg_color9" Fill="Pink" Width="15" Height="15" Grid.Column="3" Grid.Row="1" MouseLeftButtonDown="evento_herramientas_color"/>
+                <Rectangle x:Name="rtg_color10" Fill="Turquoise" Width="15" Height="15" Grid.Column="4" Grid.Row="1" MouseLeftButtonDown="evento_herramientas_color"/>
+                
+                <Button Content="..." Grid.Column="5" Grid.Row="0" Grid.RowSpan="2" Click="evento_herramientas_paletacolores"/>
+            </Grid>
+            
+            <!--Negrita/cursiva-->
+            <Label Height="30" Width="55" Margin="20,0,0,0" FontWeight="Bold" Background="LightGray" MouseLeftButtonDown="evento_herramientas_negrita">Negrita</Label>
+            <Label Height="30" Width="55" FontStyle="Oblique" Background="LightGray" MouseLeftButtonDown="evento_herramientas_cursiva">Cursiva</Label>
+            
+            <!--Tamaño letra-->
+            <Label Margin="20,0,0,0" FontWeight="Bold" Content="Tamaño letra:"/>
+            <TextBox x:Name="tbx_tamanioLetra" Text="12" Width="22" MaxLength="2" FlowDirection="RightToLeft" TextChanged="evento_herramientas_tamanioLetra" PreviewTextInput="evento_herramientas_tamanioLetra_reglaNumeros"></TextBox>
+        </ToolBar>
+        
+        <RichTextBox x:Name="rtbx_editor" Height="484" FontSize="12" FontFamily="Arial"/>
+    </StackPanel>
+</Window>
