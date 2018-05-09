@@ -169,75 +169,59 @@ namespace Ejercicio13
             SaveFileDialog ventanaGuardar = new SaveFileDialog();
             ventanaGuardar.InitialDirectory = @"C:\";
             ventanaGuardar.FileName = "NuevoDocumento";
-            ventanaGuardar.DefaultExt = ".txt";
-            ventanaGuardar.Filter = "Textos|*.txt|Todas las Extensiones|*.*";
+            ventanaGuardar.DefaultExt = ".rtf";
+            ventanaGuardar.Filter = "Textos|*.rtf|Todas las Extensiones|*.*";
 
             //Aquí recoje si se llego a pulsar guardar
             bool? opcion = ventanaGuardar.ShowDialog();
             if (opcion==true)
             {
-                if (!GuardarArchivo(ventanaGuardar.FileName))
-                {
-                    MessageBox.Show("Error al intentar guardar el archivo");
-                }
-            }
-        }
-        private bool GuardarArchivo(string ruta)
-        {
-            try
-            {
-                FileStream fichero = new FileStream(ruta, FileMode.Create);
-                using (StreamWriter escritor = new StreamWriter(fichero))
-                {
-                    rtbx_editor.SelectAll();
-                    escritor.Write(rtbx_editor.Selection.Text);
-                }
-                fichero.Close();
-                return true;
-            }
-            catch (Exception)
-            {
-                return false;
+                try 
+	            {	        
+		            rtbx_editor.SelectAll();
+                    TextRange rango = new TextRange(rtbx_editor.Selection.Start, rtbx_editor.Selection.End);
+
+                    using(FileStream fichero = new FileStream(ventanaGuardar.FileName,FileMode.Create))
+                    {
+                        rango.Save(fichero,DataFormats.Rtf,true);
+                    }
+
+	            }
+	            catch (Exception)
+	            {
+		            MessageBox.Show("Error al intentar guardar el archivo");
+	            }
+
             }
         }
 
         private void evento_menu_abrir(object sender, RoutedEventArgs e)
         {
             OpenFileDialog ventanaAbrir = new OpenFileDialog();
-            ventanaAbrir.InitialDirectory = @"c:\"; //IMPORTANTE poner esta barra invertida, con la barra normal peta
+            ventanaAbrir.InitialDirectory = @"C:\"; 
             ventanaAbrir.FileName = "";
-            ventanaAbrir.DefaultExt = ".txt";
-            ventanaAbrir.Filter = "Textos|*.txt|Todas las Extensiones|*.*";
+            ventanaAbrir.DefaultExt = ".rtf";
+            ventanaAbrir.Filter = "Textos|*.rtf|Todas las Extensiones|*.*";
 
             Nullable<bool> resultado = ventanaAbrir.ShowDialog();
 
             if (resultado == true)
             {
-                if (!LeerArchivo(ventanaAbrir.FileName))
-                {
-                    MessageBox.Show("Error al intentar abrir el archivo");
-                }
-            }
-        }
-        private bool LeerArchivo(string ruta)
-        {
-            try
-            {
-                FileStream fichero = new FileStream(ruta, FileMode.Open);
-                using (StreamReader lector = new StreamReader(fichero))
-                {
+                try 
+	            {
                     rtbx_editor.SelectAll();
-                    rtbx_editor.Selection.Text = lector.ReadToEnd();
-                }
-                fichero.Close();
-                return true;
-            }
-            catch (Exception)
-            {
-                return false;
+                    TextRange rango = new TextRange(rtbx_editor.Selection.Start, rtbx_editor.Selection.End);
+                    using(FileStream fichero = new FileStream(ventanaAbrir.FileName,FileMode.Open))
+                    {
+                        rango.Load(fichero, DataFormats.Rtf);
+                    }
+	            }
+	            catch (Exception)
+	            {
+                    MessageBox.Show("Error al intentar abrir el archivo");
+	            }                   
             }
         }
-
         #endregion
     }
 }
