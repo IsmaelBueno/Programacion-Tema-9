@@ -1,0 +1,23 @@
+﻿<Window x:Class="Ejercicio16.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Ejercicio 16" Height="275.188" Width="300"
+        ResizeMode="NoResize">
+    
+        <StackPanel>
+            <ToolBar>
+                <Button Height="30" Width="50" Content="Guardar" Click="evento_herramientas_guardar"></Button>
+                <Button Height="30" Width="50" Content="Cargar" Click="evento_herramientas_cargar"></Button>
+                <Button Height="30" Width="40" Content="Salir" Click="evento_herramientas_salir"></Button>
+            </ToolBar>
+        <Button Content="Añadir cliente" HorizontalAlignment="Center" Margin="0,20,0,0" VerticalAlignment="Top" Width="140" Click="evento_botones_anadirCliente"/>
+        <Button Content="Editar cliente" HorizontalAlignment="Center" Margin="0,0,0,0" VerticalAlignment="Top" Width="140" Click="evento_botones_editarCliente"/>
+        <Button Content="Listar clientes" HorizontalAlignment="Center" Margin="0,0,0,0" VerticalAlignment="Top" Width="140" Click="evento_botones_listarClientes"/>
+        <Button Content="Borrar cliente" HorizontalAlignment="Center" Margin="0,0,0,0" VerticalAlignment="Top" Width="140" Click="evento_botones_borrarCliente"/>
+        <Button Content="Borrar todos los clientes" HorizontalAlignment="Center" Margin="0,0,0,0" VerticalAlignment="Top" Width="140" Click="evento_botones_borrarTodosClientes"/>
+            
+        <Label Content="Ruta:" HorizontalAlignment="Left" Margin="30,20,0,0" VerticalAlignment="Top" Width="59" FontWeight="Bold"/>
+        <Label x:Name="lbl_ruta" Content="Fichero sin guardar todavía" HorizontalAlignment="Left" Margin="30,0,0,0" FontStyle="Oblique"/>
+
+        </StackPanel>
+</Window>
