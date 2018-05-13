@@ -1,0 +1,18 @@
+﻿<Window x:Class="Ejercicio19.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Ejercicio 19" MinHeight="130" MinWidth="570"
+        Height="130" Width="570"
+        Initialized="evento_IniciarPrograma">
+    <Grid>
+        <Button Content="Crear una matriz de botones de:" HorizontalAlignment="Left" Margin="27,34,0,0" VerticalAlignment="Top" Width="180" Click="evento_boton_CreacionMatriz"/>
+
+        <Label Content="Filas:" HorizontalAlignment="Left" Margin="232,30,0,0" VerticalAlignment="Top" FontWeight="Bold"/>
+        <ComboBox x:Name="cbx_filas" HorizontalAlignment="Left" Margin="275,35,0,0" VerticalAlignment="Top" Width="38" IsEditable="True" SelectedIndex="9"/>
+        
+        <Label Content="Columnas" HorizontalAlignment="Left" Margin="343,31,0,0" VerticalAlignment="Top" FontWeight="Bold"/>
+        <ComboBox x:Name="cbx_columnas" HorizontalAlignment="Left" Margin="413,35,0,0" VerticalAlignment="Top" Width="38" IsEditable="True" RenderTransformOrigin="5.158,2.955" SelectedIndex="9"/>
+        
+        <Grid x:Name="grd_matriz" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="30,90,0,0"/>
+    </Grid>
+</Window>
