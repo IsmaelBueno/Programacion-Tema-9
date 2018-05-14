@@ -1,0 +1,35 @@
+﻿<Window x:Class="Ejercicio_18.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="MainWindow" Height="468" Width="480"
+        ResizeMode="NoResize">
+    <Grid>
+
+        <Label Content="JarraA" HorizontalAlignment="Left" Margin="39,34,0,0" VerticalAlignment="Top" Width="46"/>
+        <Label Content="JarraB" HorizontalAlignment="Left" Margin="342,40,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="tbx_jarraA" HorizontalAlignment="Left" Height="23" Margin="90,37,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="35" MaxLength="2" FlowDirection="RightToLeft" PreviewTextInput="evento_controlarContenidoTextBox"/>
+        <TextBox x:Name="tbx_jarraB" HorizontalAlignment="Left" Height="23" Margin="389,40,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="35" MaxLength="2" FlowDirection="RightToLeft" PreviewTextInput="evento_controlarContenidoTextBox"/>
+        
+        <Button Content="Crear jarras" HorizontalAlignment="Left" Margin="192,37,0,0" VerticalAlignment="Top" Width="75" Height="26" RenderTransformOrigin="0.858,0.348" Click="evento_CrearJarras"/>
+
+        <Button x:Name="btn_llenarA" Content="Llenar" HorizontalAlignment="Left" Margin="39,107,0,0" VerticalAlignment="Top" Width="75" IsEnabled="False" Click="evento_LlenarJarraA"/>
+        <Button x:Name="btn_llenarB" Content="Llenar" HorizontalAlignment="Left" Margin="349,107,0,0" VerticalAlignment="Top" Width="75" IsEnabled="False" Click="evento_LlenarJarraB"/>
+
+        <Button x:Name="btn_vaciarA" Content="Vaciar" HorizontalAlignment="Left" Margin="39,161,0,0" VerticalAlignment="Top" Width="75" IsEnabled="False" Click="evento_VaciarJarraA"/>
+        <Button x:Name="btn_vaciarB" Content="Vaciar" HorizontalAlignment="Left" Margin="349,161,0,0" VerticalAlignment="Top" Width="75" IsEnabled="False" Click="evento_VaciarJarraB"/>
+
+        <Button x:Name="btn_llenarenA" Content="&lt;-----" HorizontalAlignment="Left" Margin="192,107,0,0" VerticalAlignment="Top" Width="75" IsEnabled="False" Click="evento_LlenarAconB"/>
+        <Button x:Name="btn_llenarenB" Content="----->" HorizontalAlignment="Left" Margin="192,134,0,0" VerticalAlignment="Top" Width="75" IsEnabled="False" Click="evento_LlenarBconA"/>
+        
+        <Button x:Name="btn_finalizar" Content="Finalizar" HorizontalAlignment="Left" Margin="192,161,0,0" VerticalAlignment="Top" Width="75" IsEnabled="False" Click="evento_finalizar"/>
+
+        <ProgressBar x:Name="prb_barraprogresoA" HorizontalAlignment="Left" Height="39" Margin="39,226,0,0" VerticalAlignment="Top" Width="153" IsEnabled="False" BorderThickness="1"/>
+        <ProgressBar x:Name="prb_barraprogresoB" HorizontalAlignment="Left" Height="39" Margin="271,226,0,0" VerticalAlignment="Top" Width="153" IsEnabled="False"/>
+        <ListBox x:Name="lbx_acciones" HorizontalAlignment="Left" Height="116" Margin="39,294,0,0" VerticalAlignment="Top" Width="385"/>
+
+
+
+
+
+    </Grid>
+</Window>
