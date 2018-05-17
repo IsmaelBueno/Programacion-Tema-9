@@ -10,20 +10,17 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
 using System.Windows.Shapes;
 //-------------------------------------
 using System.Text.RegularExpressions;
 using System.Windows.Threading;
 
-namespace Ejercicio27
+namespace MenuPrincipalEjercicios
 {
-    public delegate void Delegado(int tiempo);
-
     /// <summary>
-    /// Lógica de interacción para MainWindow.xaml
+    /// Lógica de interacción para VentanaEjercicio27.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class VentanaEjercicio27 : Window
     {
         //establecer sudoku
         string rutaSudokus = @"../../sudokus.txt";
@@ -36,14 +33,12 @@ namespace Ejercicio27
         int tiempoInicial = 600;
         DispatcherTimer contadorTiempo = new DispatcherTimer();
 
-
-        public MainWindow()
+        public VentanaEjercicio27()
         {
             InitializeComponent();
             contadorTiempo.Interval = new TimeSpan(0, 0, 1);
             contadorTiempo.Tick += contadorTiempo_Tick;
         }
-
 
         //Usuario
         private void evento_menu_JuegoNuevo(object sender, RoutedEventArgs e)
@@ -62,11 +57,11 @@ namespace Ejercicio27
         }
         private void evento_menu_Configuracion(object sender, RoutedEventArgs e)
         {
-            VentanaTimpo configuracion = new VentanaTimpo();
+            VventanaTimpo configuracion = new VventanaTimpo();
             configuracion.TiempoInicialCambiado += configuracion_TiempoInicialCambiado;
             configuracion.ShowDialog();
         }
-         private void evento_menu_Salir(object sender, RoutedEventArgs e)
+        private void evento_menu_Salir(object sender, RoutedEventArgs e)
         {
             this.Close();
         }
@@ -91,7 +86,7 @@ namespace Ejercicio27
         //METODOS Y EVENTOS
         private void CrearSudoku()
         {
-            sudokuActual = new Sudoku(rutaSudokus,rutaSoluciones,rnd.Next(0,2));
+            sudokuActual = new Sudoku(rutaSudokus, rutaSoluciones, rnd.Next(0, 2));
         }
         private void RellenarCasillas()
         {
@@ -99,7 +94,7 @@ namespace Ejercicio27
             grd_contenido.Children.Clear();
 
             for (int i = 0; i < Sudoku.TAMANIODIMENSIONES1; i++)
-			{
+            {
                 for (int j = 0; j < Sudoku.TAMANIODIMENSIONES1; j++)
                 {
                     //definición del textbox con sus propiedades y evento, el bucle lo coloca en su casilla correspondiente
@@ -109,7 +104,7 @@ namespace Ejercicio27
                     tmpTextBox.BorderBrush = Brushes.Black;
                     tmpTextBox.MaxLength = 1;
                     tmpTextBox.FontSize = 30D;
-                    tmpTextBox.PreviewTextInput+=evento_textbox_ComprobarCaracter;
+                    tmpTextBox.PreviewTextInput += evento_textbox_ComprobarCaracter;
                     tmpTextBox.Foreground = Brushes.Blue;
 
 
@@ -130,7 +125,7 @@ namespace Ejercicio27
                     tmpTextBox.BorderThickness = new Thickness(bordeizq, bordetop, bordeder, bordebot);
 
                     //si el valor del sudoku en la casila no es 0, lo introducirá en el .text del textbox temporal y lo deshabilita para que no se pueda editar.
-                    if (sudokuActual.Sudoku1[i,j] != '0')
+                    if (sudokuActual.Sudoku1[i, j] != '0')
                     {
                         tmpTextBox.Text = sudokuActual.Sudoku1[i, j].ToString();
                         tmpTextBox.IsReadOnly = true;
@@ -140,7 +135,7 @@ namespace Ejercicio27
                     //por ultimo añade este texbox temporal a children del grid_contenido
                     grd_contenido.Children.Add(tmpTextBox);
                 }
-			}
+            }
         }
         private void evento_textbox_ComprobarCaracter(object sender, TextCompositionEventArgs e)
         {

@@ -58,6 +58,7 @@
     </Compile>
     <Compile Include="Cliente.cs" />
     <Compile Include="Jarra.cs" />
+    <Compile Include="Sudoku.cs" />
     <Compile Include="VentanaEjercicio1.xaml.cs">
       <DependentUpon>VentanaEjercicio1.xaml</DependentUpon>
     </Compile>
@@ -81,6 +82,9 @@
     </Compile>
     <Compile Include="VentanaEjercicio20.xaml.cs">
       <DependentUpon>VentanaEjercicio20.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="VentanaEjercicio27.xaml.cs">
+      <DependentUpon>VentanaEjercicio27.xaml</DependentUpon>
     </Compile>
     <Compile Include="VentanaEjercicio3.xaml.cs">
       <DependentUpon>VentanaEjercicio3.xaml</DependentUpon>
@@ -117,6 +121,9 @@
     </Compile>
     <Compile Include="vtn_ListarClientes.xaml.cs">
       <DependentUpon>vtn_ListarClientes.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="VventanaTimpo.xaml.cs">
+      <DependentUpon>VventanaTimpo.xaml</DependentUpon>
     </Compile>
     <Page Include="AcercaDe.xaml">
       <SubType>Designer</SubType>
@@ -166,6 +173,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="VentanaEjercicio27.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="VentanaEjercicio3.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -211,6 +222,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="vtn_ListarClientes.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="VventanaTimpo.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -263,6 +278,15 @@
     <Resource Include="imagenes\bugfixed.png" />
     <Resource Include="imagenes\circulo.png" />
     <Resource Include="imagenes\equis.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="iconos\sudoku.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="sudokus.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="soluciones.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

@@ -18,7 +18,7 @@
         
         <Grid x:Name="grd_panelEjercicios" Height="100" Margin="10"/>
             
-        <Label Content="*Disponibles actualmente: 1-9,12,13,14,16,18,20 CORRIEGIENDO EL 19 Y EL 27" FontStyle="Oblique" Foreground="red"/>
+        <Label Content="*Disponibles actualmente: 1-9,12,13,14,16,18,20 y 27 CORRIEGIENDO EL 19" FontStyle="Oblique" Foreground="red"/>
         <TextBlock x:Name="tbk_informacionejercicio" Margin="100" TextWrapping="Wrap" Text="" FontSize="15" Background="White" Height="150"/>
     </StackPanel>
 </Window>

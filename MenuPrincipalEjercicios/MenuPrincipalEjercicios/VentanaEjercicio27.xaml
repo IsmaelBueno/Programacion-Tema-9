@@ -1,20 +1,20 @@
-﻿<Window x:Class="Ejercicio27.MainWindow"
+﻿<Window x:Class="MenuPrincipalEjercicios.VentanaEjercicio27"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         Title="Ejercicio 27" Height="520" Width="450"
-        ResizeMode="NoResize">
-    
+        ResizeMode="NoResize" Icon="iconos/sudoku.ico">
+
     <StackPanel Background="LightBlue">
-        
-        <Menu>   
+
+        <Menu>
             <MenuItem Header="Juego">
                 <MenuItem Header="Juego nuevo" Click="evento_menu_JuegoNuevo"/>
                 <MenuItem Header="Reiniciar" Click="evento_menu_Reiniciar"/>
                 <MenuItem Header="Configuración" Click="evento_menu_Configuracion"/>
                 <MenuItem Header="Salir" Click="evento_menu_Salir"/>
-            </MenuItem>    
+            </MenuItem>
         </Menu>
-        
+
         <Grid x:Name="grd_contenido" Height="370" Margin="20,20,20,10">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="*"/>
