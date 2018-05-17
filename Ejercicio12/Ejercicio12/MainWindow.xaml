@@ -10,7 +10,7 @@
         <Label Content="Verde" HorizontalAlignment="Left" Margin="86,227,0,0" VerticalAlignment="Top" Width="42" Foreground="Green" FontWeight="Bold"/>
         <Label Content="Azul" HorizontalAlignment="Left" Margin="86,258,0,0" VerticalAlignment="Top" Width="42" Foreground="Blue" FontWeight="Bold"/>
         
-        <ScrollBar HorizontalAlignment="Left" Margin="265,142,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.5" Height="254" Width="18" Maximum="25.5" Value="25.5" ValueChanged="ScrollBar_ValueChanged_3">
+        <ScrollBar HorizontalAlignment="Left" Margin="265,142,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.5" Height="254" Width="18" Maximum="255" ValueChanged="ScrollBar_ValueChanged_3" SmallChange="1">
             <ScrollBar.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
@@ -20,7 +20,7 @@
                 </TransformGroup>
             </ScrollBar.RenderTransform>
         </ScrollBar>
-        <ScrollBar HorizontalAlignment="Left" Margin="265,86,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.5" Height="254" Width="18" Maximum="25.5" Value="25.5" ValueChanged="ScrollBar_ValueChanged_1">
+        <ScrollBar HorizontalAlignment="Left" Margin="265,86,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.5" Height="254" Width="18" Maximum="255" ValueChanged="ScrollBar_ValueChanged_1" SmallChange="1">
             <ScrollBar.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
@@ -30,7 +30,7 @@
                 </TransformGroup>
             </ScrollBar.RenderTransform>
         </ScrollBar>
-        <ScrollBar HorizontalAlignment="Left" Margin="265,114,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.5" Height="254" Width="18" Maximum="25.5" Value="25.5" ValueChanged="ScrollBar_ValueChanged_2">
+        <ScrollBar HorizontalAlignment="Left" Margin="265,114,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.5" Height="254" Width="18" Maximum="255" ValueChanged="ScrollBar_ValueChanged_2" SmallChange="1">
             <ScrollBar.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>

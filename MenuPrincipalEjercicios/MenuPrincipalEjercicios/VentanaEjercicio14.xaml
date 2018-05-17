@@ -1,0 +1,29 @@
+﻿<Window x:Class="MenuPrincipalEjercicios.VentanaEjercicio14"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Ejercicio 14" Height="289" Width="608"
+        ResizeMode="NoResize" Icon="iconos/lupa.ico">
+    <Grid Background="LightBlue">
+        <Button Content="Seleccionar fichero" HorizontalAlignment="Left" Margin="38,73,0,0" VerticalAlignment="Top" Width="113" Height="71" Click="evento_btn_selecionarFichero"/>
+
+        <Label Content="Número de lineas:" HorizontalAlignment="Left" Margin="201,57,0,0" VerticalAlignment="Top" FontWeight="Bold"/>
+        <Label Content="Número de palabras:" HorizontalAlignment="Left" Margin="201,88,0,0" VerticalAlignment="Top" FontWeight="Bold"/>
+        <Label Content="Tamaño:" HorizontalAlignment="Left" Margin="201,119,0,0" VerticalAlignment="Top" FontWeight="Bold"/>
+        <Label Content="Ruta:" HorizontalAlignment="Left" Margin="201,150,0,0" VerticalAlignment="Top" FontWeight="Bold"/>
+        <Label Content="Nombre del archivo:" HorizontalAlignment="Left" Margin="201,181,0,0" VerticalAlignment="Top" FontWeight="Bold"/>
+
+
+        <Label Content="" x:Name="lbl_numeroLineas" HorizontalAlignment="Left" Margin="353,57,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.658,0.962"/>
+        <Label Content="" x:Name="lbl_numeroPalabras" HorizontalAlignment="Left" Margin="353,88,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.658,0.962"/>
+        <Label Content="" x:Name="lbl_tamanio" HorizontalAlignment="Left" Margin="353,119,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.658,0.962"/>
+        <Label Content="" x:Name="lbl_ruta"  HorizontalAlignment="Left" Margin="353,150,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.658,0.962"/>
+        <Label Content="" x:Name="lbl_nombreArchivo" HorizontalAlignment="Left" Margin="353,181,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.658,0.962"/>
+
+        <Label Content="Información de un fichero de texto" HorizontalAlignment="Center" Margin="38,10,0,0" VerticalAlignment="Top" Width="262" FontStyle="Oblique" FontSize="15" FontWeight="Bold"/>
+
+        <Label Content="Fecha de creación:" HorizontalAlignment="Left" Margin="202,212,0,0" VerticalAlignment="Top" FontWeight="Bold"/>
+        <Label Content="" x:Name="lbl_FechaCreacion" HorizontalAlignment="Left" Margin="353,212,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.658,0.962"/>
+
+
+    </Grid>
+</Window>

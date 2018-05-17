@@ -10,19 +10,18 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
 using System.Windows.Shapes;
-//-----------------------------------------------
+//-------------------------------
 using System.Text.RegularExpressions;
 
-namespace Ejercicio8
+namespace MenuPrincipalEjercicios
 {
     /// <summary>
-    /// Lógica de interacción para MainWindow.xaml
+    /// Lógica de interacción para VentanaEjercicio8.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class VentanaEjercicio8 : Window
     {
-        public MainWindow()
+        public VentanaEjercicio8()
         {
             InitializeComponent();
         }

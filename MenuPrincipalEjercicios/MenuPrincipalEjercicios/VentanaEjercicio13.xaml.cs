@@ -10,23 +10,22 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
 using System.Windows.Shapes;
 //--------------------------------------
 using System.Text.RegularExpressions;
 using System.IO;
 using Microsoft.Win32;
 
-namespace Ejercicio13
+namespace MenuPrincipalEjercicios
 {
     /// <summary>
-    /// Lógica de interacción para MainWindow.xaml
+    /// Lógica de interacción para VentanaEjercicio13.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class VentanaEjercicio13 : Window
     {
         const int REAJUSTETAMANIORICHTEXTBOX = 90;
 
-        public MainWindow()
+        public VentanaEjercicio13()
         {
             InitializeComponent();
         }
@@ -49,7 +48,7 @@ namespace Ejercicio13
         {
             TextRange textoSeleccionado = new TextRange(rtbx_editor.Selection.Start, rtbx_editor.Selection.End);
 
-            try 
+            try
             {
                 FontWeight grosorFuente = (FontWeight)textoSeleccionado.GetPropertyValue(FontWeightProperty);
 
@@ -60,12 +59,12 @@ namespace Ejercicio13
                 else
                 {
                     textoSeleccionado.ApplyPropertyValue(FontWeightProperty, FontWeights.Bold);
-                }           		      
-	        }
-	        catch (Exception)
-	        {
+                }
+            }
+            catch (Exception)
+            {
                 textoSeleccionado.ApplyPropertyValue(FontWeightProperty, FontWeights.Bold);
-	        }
+            }
         }
 
         private void evento_herramientas_cursiva(object sender, MouseButtonEventArgs e)
@@ -89,7 +88,7 @@ namespace Ejercicio13
             {
                 rango.ApplyPropertyValue(FontStyleProperty, FontStyles.Oblique);
             }
-    
+
         }
 
         private void evento_herramientas_color(object sender, MouseButtonEventArgs e)
@@ -149,7 +148,7 @@ namespace Ejercicio13
             }
             catch (Exception)
             {
-              //Este catch esta provisional porque me da una especie de error raro, pero solo al arrancar haciendo esto lo cubro.
+                //Este catch esta provisional porque me da una especie de error raro, pero solo al arrancar haciendo esto lo cubro.
             }
         }
         #endregion
@@ -171,23 +170,23 @@ namespace Ejercicio13
 
             //Aquí recoje si se llego a pulsar guardar
             bool? opcion = ventanaGuardar.ShowDialog();
-            if (opcion==true)
+            if (opcion == true)
             {
-                try 
-	            {	        
-		            rtbx_editor.SelectAll();
+                try
+                {
+                    rtbx_editor.SelectAll();
                     TextRange rango = new TextRange(rtbx_editor.Selection.Start, rtbx_editor.Selection.End);
 
-                    using(FileStream fichero = new FileStream(ventanaGuardar.FileName,FileMode.Create))
+                    using (FileStream fichero = new FileStream(ventanaGuardar.FileName, FileMode.Create))
                     {
-                        rango.Save(fichero,DataFormats.Rtf,true);
+                        rango.Save(fichero, DataFormats.Rtf, true);
                     }
 
-	            }
-	            catch (Exception)
-	            {
-		            MessageBox.Show("Error al intentar guardar el archivo");
-	            }
+                }
+                catch (Exception)
+                {
+                    MessageBox.Show("Error al intentar guardar el archivo");
+                }
 
             }
         }
@@ -195,7 +194,7 @@ namespace Ejercicio13
         private void evento_menu_abrir(object sender, RoutedEventArgs e)
         {
             OpenFileDialog ventanaAbrir = new OpenFileDialog();
-            ventanaAbrir.InitialDirectory = @"C:\"; 
+            ventanaAbrir.InitialDirectory = @"C:\";
             ventanaAbrir.FileName = "";
             ventanaAbrir.DefaultExt = ".rtf";
             ventanaAbrir.Filter = "Textos|*.rtf|Todas las Extensiones|*.*";
@@ -204,21 +203,22 @@ namespace Ejercicio13
 
             if (resultado == true)
             {
-                try 
-	            {
+                try
+                {
                     rtbx_editor.SelectAll();
                     TextRange rango = new TextRange(rtbx_editor.Selection.Start, rtbx_editor.Selection.End);
-                    using(FileStream fichero = new FileStream(ventanaAbrir.FileName,FileMode.Open))
+                    using (FileStream fichero = new FileStream(ventanaAbrir.FileName, FileMode.Open))
                     {
                         rango.Load(fichero, DataFormats.Rtf);
                     }
-	            }
-	            catch (Exception)
-	            {
+                }
+                catch (Exception)
+                {
                     MessageBox.Show("Error al intentar abrir el archivo");
-	            }                   
+                }
             }
         }
         #endregion
     }
 }
+

@@ -6,7 +6,7 @@
     <Grid>
         <Label Content="Calcular la suma de los primeros n-números.&#xA;El valor de n se lee desde el teclado." HorizontalAlignment="Left" Margin="79,41,0,0" VerticalAlignment="Top" Height="73" Width="362" FontSize="18"/>
         <Label Content="Número:" HorizontalAlignment="Left" Margin="127,119,0,0" VerticalAlignment="Top" FontSize="16"/>
-        <TextBox x:Name="tbx_numero" HorizontalAlignment="Left" Height="29" Margin="204,119,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="171" FontSize="16" FlowDirection="RightToLeft" TextChanged="tbx_numero_TextChanged" MaxLength="9"/>
+        <TextBox x:Name="tbx_numero" HorizontalAlignment="Left" Height="29" Margin="204,119,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="171" FontSize="16" FlowDirection="RightToLeft" MaxLength="9"/>
         <Button x:Name="btn_calcular" Content="Calcular" HorizontalAlignment="Left" Margin="142,180,0,0" VerticalAlignment="Top" Width="75" Click="btn_calcular_Click"/>
         <Button x:Name="btn_cancelar"  Content="Cerrar" HorizontalAlignment="Left" Margin="281,180,0,0" VerticalAlignment="Top" Width="75" Click="btn_cancelar_Click"/>
         <Label Content="La suma obtenida es:&#xD;&#xA;" HorizontalAlignment="Left" Margin="79,241,0,0" VerticalAlignment="Top" FontSize="16"/>

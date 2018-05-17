@@ -1,0 +1,25 @@
+﻿<Window x:Class="MenuPrincipalEjercicios.vtn_anadirCliente"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Añadir cliente" Height="300" Width="473.684"
+        ResizeMode="NoResize">
+    <Grid>
+        <Label Content="Nuevo cliente" HorizontalAlignment="Center" Margin="0,9,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.033,3.095" FontWeight="Bold" FontSize="25"/>
+        <Label Content="Dni:" HorizontalAlignment="Left" Margin="36,57,0,0" VerticalAlignment="Top" FontWeight="Bold"/>
+        <Label Content="Nombre:" HorizontalAlignment="Left" Margin="36,88,0,0" VerticalAlignment="Top" FontWeight="Bold"/>
+        <Label Content="Apellidos:" HorizontalAlignment="Left" Margin="36,119,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.149,1.312" FontWeight="Bold"/>
+        <Label Content="Fecha de nacimiento:" HorizontalAlignment="Left" Margin="36,150,0,0" VerticalAlignment="Top" RenderTransformOrigin="1.049,1.903" FontWeight="Bold"/>
+        <Label Content="Sueldo:" HorizontalAlignment="Left" Margin="36,181,0,0" VerticalAlignment="Top" FontWeight="Bold"/>
+
+        <TextBox x:Name="tbx_dni" HorizontalAlignment="Left" Height="23" Margin="170,60,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="78" MaxLength="9"/>
+        <TextBox x:Name="tbx_nombre" HorizontalAlignment="Left" Height="23" Margin="170,91,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="264" RenderTransformOrigin="0.551,0.286"/>
+        <TextBox x:Name="tbx_apellidos" HorizontalAlignment="Left" Height="23" Margin="170,122,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="264" RenderTransformOrigin="0.551,0.286"/>
+        <TextBox x:Name="tbx_fechaNacimiento" HorizontalAlignment="Left" Height="23" Margin="170,153,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="78" RenderTransformOrigin="0.551,0.286" MaxLength="10"/>
+        <TextBox x:Name="tbx_sueldo" HorizontalAlignment="Left" Height="23" Margin="170,181,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="78" RenderTransformOrigin="0.551,0.286" MaxLength="5"/>
+        <Button Content="Añadir" HorizontalAlignment="Center" Margin="0,230,0,0" VerticalAlignment="Top" Width="75" Click="evento_anadirCliente"/>
+
+        <Label Content="dd/mm/aaaa" HorizontalAlignment="Left" Margin="253,154,0,0" VerticalAlignment="Top" FontSize="8" FontStyle="Oblique" Height="23"/>
+
+
+    </Grid>
+</Window>

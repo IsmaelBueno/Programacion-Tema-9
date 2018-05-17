@@ -10,22 +10,21 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace Ejercicio12
+namespace MenuPrincipalEjercicios
 {
     /// <summary>
-    /// Lógica de interacción para MainWindow.xaml
+    /// Lógica de interacción para VentanaEjercicio12.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class VentanaEjercicio12 : Window
     {
         byte rojo = 0;
         byte verde = 0;
         byte azul = 0;
         const byte TRANSPARENCIA = 255;
 
-        public MainWindow()
+        public VentanaEjercicio12()
         {
             InitializeComponent();
         }

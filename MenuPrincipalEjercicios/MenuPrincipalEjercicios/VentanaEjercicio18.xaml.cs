@@ -10,27 +10,25 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
 using System.Windows.Shapes;
 //--------------------------------------
 using System.Text.RegularExpressions;
 
-namespace Ejercicio_18
+namespace MenuPrincipalEjercicios
 {
     /// <summary>
-    /// Lógica de interacción para MainWindow.xaml
+    /// Lógica de interacción para VentanaEjercicio18.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class VentanaEjercicio18 : Window
     {
         Jarra jarraA;
         Jarra jarraB;
         bool jarrasdefinidas = false;
 
-        public MainWindow()
+        public VentanaEjercicio18()
         {
             InitializeComponent();
         }
-
         private void evento_controlarContenidoTextBox(object sender, TextCompositionEventArgs e)
         {
             Regex regla = new Regex("[0-9]");
@@ -91,7 +89,7 @@ namespace Ejercicio_18
             if (jarraA.Llenar())
                 tmp.Content = "Se lleno la jarra A.";
             else tmp.Content = "La jarra A ya se encuentra llena.";
-               lbx_acciones.Items.Add(tmp);
+            lbx_acciones.Items.Add(tmp);
         }
         private void evento_LlenarJarraB(object sender, RoutedEventArgs e)
         {
@@ -157,9 +155,8 @@ namespace Ejercicio_18
 
             prb_barraprogresoA.Value = 0;
             prb_barraprogresoB.Value = 0;
-            
+
         }
-
-
     }
 }
+

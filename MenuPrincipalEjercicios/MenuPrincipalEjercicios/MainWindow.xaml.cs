@@ -22,333 +22,193 @@ namespace MenuPrincipalEjercicios
     /// </summary>
     public partial class MainWindow : Window
     {
+        const int NFILAS = 3;
+        const int NCOLUMNAS = 9;
+
         public MainWindow()
         {
             InitializeComponent();
         }
 
-        #region Ejercicio 1
-        private void Ejercicio1_MouseEnter(object sender, MouseEventArgs e)
+        //Evento que carga el grid de botones al inicar el programa
+        private void evento_inicializarPrograma(object sender, EventArgs e)
         {
-            tbk_informacionejercicio.Text = "Calcula la suma de los \"N\" primeros números.";
-        }
-        private void Button_Click_1(object sender, RoutedEventArgs e)
-        {
-            VentanaEjercicio1 v = new VentanaEjercicio1();
-            v.Show();
-        }
-        #endregion
+            //Definición de filas
+            for (int i = 0; i < NFILAS; i++)
+            {
+                grd_panelEjercicios.RowDefinitions.Add(new RowDefinition());
+            }
 
-        #region Ejercicio 2
-        private void Ejercicio2_MouseEnter(object sender, MouseEventArgs e)
-        {
-            tbk_informacionejercicio.Text = "Permite evaluar una expresión matemática simple con los operadores: \"+\" , \"-\" , \"*\" , \"/\".\nNO tiene en cuenta la prioridad de operadores, solo el orden.";
-            /*Haz un programa que use una clase que permita evaluar una expresión matemática simple con las operaciones; +,
--, *, / (sumar, restar, multiplicar y dividir) y muestre el resultado*/
-        }
-        private void Button_Click_2(object sender, RoutedEventArgs e)
-        {
-            VentanaEjercicio2 v = new VentanaEjercicio2();
-            v.Show();
-        }
-        #endregion
+            for (int i = 0; i < NCOLUMNAS; i++)
+            {
+                grd_panelEjercicios.ColumnDefinitions.Add(new ColumnDefinition());
+            }
 
-        #region Ejercicio 3
-        private void Ejercicio3_MouseEnter(object sender, MouseEventArgs e)
-        {
-            tbk_informacionejercicio.Text = "Adivina en el menor número de intentos posibles un número generado aleatoriamente entre 1 y 100.";
-        }
-        private void Button_Click_3(object sender, RoutedEventArgs e)
-        {
-            VentanaEjercicio3 v = new VentanaEjercicio3();
-            v.Show();
-        }
-        #endregion
+            //Definición de los botones
 
-        #region Ejercicio 4
-        private void Ejercicio4_MouseEnter(object sender, MouseEventArgs e)
-        {
-            tbk_informacionejercicio.Text = "Calcula la suma total de los números que hay entre un número inicial y otro final.";
-        }
-        private void Button_Click_4(object sender, RoutedEventArgs e)
-        {
-            VentanaEjercicio4 v = new VentanaEjercicio4();
-            v.Show();
-        }
-        #endregion
+            int numeroEjercicio = 1;
+            for (int i = 0; i < NFILAS; i++)
+            {
+                for (int j = 0; j < NCOLUMNAS; j++)
+                {
+                    //Definición de cada botón
+                    Button tmpBoton = new Button();
+                    tmpBoton.Content = string.Format("Ejercicio {0}",numeroEjercicio);
+                    numeroEjercicio++;
+                    tmpBoton.FontWeight = FontWeights.Bold;
+                    tmpBoton.FontFamily = new FontFamily("Consolas");
+                    tmpBoton.MouseEnter+=evento_ratonEntrandoEjercicios;
+                    tmpBoton.MouseLeave+=evento_ratonSaliendoEjercicios;
+                    tmpBoton.Click+=evento_clickEjercicios;
 
-        #region Ejercicio 5
-        private void Ejercicio5_MouseEnter(object sender, MouseEventArgs e)
-        {
-            tbk_informacionejercicio.Text = "Puedes introducir una frase y un valor de desplazamiento para encriptar (De 0 a 9), basándose en este valor encriptará la frase y también hará el proceso inverso para desencriptarla.";
-        }
-        private void Button_Click_5(object sender, RoutedEventArgs e)
-        {
-            VentanaEjercicio5 v = new VentanaEjercicio5();
-            v.Show();
-        }
-        #endregion
+                    grd_panelEjercicios.Children.Add(tmpBoton);
 
-        #region Ejercicio 6
-        private void Ejercicio6_MouseEnter(object sender, MouseEventArgs e)
-        {
-            tbk_informacionejercicio.Text = "Estamos trabajando en ello";
+                    Grid.SetColumn(tmpBoton,j);
+                    Grid.SetRow(tmpBoton,i);
+                }
+            }
         }
-        private void Button_Click_6(object sender, RoutedEventArgs e)
-        {
 
-        }
-        #endregion
-
-        #region Ejercicio 7
-        private void Ejercicio7_MouseEnter(object sender, MouseEventArgs e)
+        //BOTONES
+        void evento_clickEjercicios(object sender, RoutedEventArgs e)
         {
-            tbk_informacionejercicio.Text = "Estamos trabajando en ello";
+ 	        string nombreBoton = ((Button)sender).Content.ToString();
+            switch (nombreBoton)
+            {
+                case "Ejercicio 1":
+                        VentanaEjercicio1 v = new VentanaEjercicio1();
+                        v.ShowDialog();
+                    break;
+                case "Ejercicio 2":
+                        VentanaEjercicio2 v2 = new VentanaEjercicio2();
+                        v2.ShowDialog();
+                    break;
+                case "Ejercicio 3":
+                        VentanaEjercicio3 v3 = new VentanaEjercicio3();
+                        v3.ShowDialog();
+                    break;
+                case "Ejercicio 4":
+                        VentanaEjercicio4 v4 = new VentanaEjercicio4();
+                        v4.ShowDialog();
+                    break;
+                case "Ejercicio 5":
+                        VentanaEjercicio5 v5 = new VentanaEjercicio5();
+                        v5.ShowDialog();
+                    break;
+                case "Ejercicio 6":
+                        VentanaEjercicio6 v6 = new VentanaEjercicio6();
+                        v6.ShowDialog();
+                    break;
+                case "Ejercicio 7":
+                    VentanaEjercicio7 v7 = new VentanaEjercicio7();
+                    v7.ShowDialog();
+                    break;
+                case "Ejercicio 8":
+                    VentanaEjercicio8 v8 = new VentanaEjercicio8();
+                    v8.ShowDialog();
+                    break;
+                case "Ejercicio 9":
+                        VentanaEjercicio9 v9 = new VentanaEjercicio9();
+                        v9.ShowDialog();
+                    break;
+                case "Ejercicio 12":
+                    VentanaEjercicio12 v12 = new VentanaEjercicio12();
+                    v12.ShowDialog();
+                    break;
+                case "Ejercicio 13":
+                    VentanaEjercicio13 v13 = new VentanaEjercicio13();
+                    v13.ShowDialog();
+                    break;
+                case "Ejercicio 14":
+                    VentanaEjercicio14 v14 = new VentanaEjercicio14();
+                    v14.ShowDialog();
+                    break;
+                case "Ejercicio 16":
+                    VentanaEjercicio16 v16 = new VentanaEjercicio16();
+                    v16.ShowDialog();
+                    break;
+                case "Ejercicio 18":
+                    VentanaEjercicio18 v18 = new VentanaEjercicio18();
+                    v18.ShowDialog();
+                    break;
+                case "Ejercicio 20":
+                    VentanaEjercicio20 v20 = new VentanaEjercicio20();
+                    v20.ShowDialog();
+                    break;
+                default:
+                    break;
+            }
         }
-        private void Button_Click_7(object sender, RoutedEventArgs e)
-        {
-
-        }
-        #endregion
-
-        #region Ejercicio 8
-        private void Ejercicio8_MouseEnter(object sender, MouseEventArgs e)
-        {
-            tbk_informacionejercicio.Text = "Estamos trabajando en ello";
-        }
-        private void Button_Click_8(object sender, RoutedEventArgs e)
-        {
-
-        }
-        #endregion
-
-        #region Ejercicio 9
-        private void Ejercicio9_MouseEnter(object sender, MouseEventArgs e)
-        {
-            tbk_informacionejercicio.Text = "Simulador de tiradas de dados, muestra los resultados y los porcentajes de cada número.";
-        }
-        private void Button_Click_9(object sender, RoutedEventArgs e)
-        {
-            VentanaEjercicio9 v = new VentanaEjercicio9();
-            v.Show();
-        }
-        #endregion
-
-        #region Ejercicio 10
-        private void Ejercicio10_MouseEnter(object sender, MouseEventArgs e)
-        {
-            tbk_informacionejercicio.Text = "Estamos trabajando en ello";
-        }
-        private void Button_Click_10(object sender, RoutedEventArgs e)
-        {
-
-        }
-        #endregion
-
-        #region Ejercicio 11
-        private void Ejercicio11_MouseEnter(object sender, MouseEventArgs e)
-        {
-            tbk_informacionejercicio.Text = "Estamos trabajando en ello";
-        }
-        private void Button_Click_11(object sender, RoutedEventArgs e)
-        {
-
-        }
-        #endregion
-
-        #region Ejercicio 12
-        private void Ejercicio12_MouseEnter(object sender, MouseEventArgs e)
-        {
-            tbk_informacionejercicio.Text = "Estamos trabajando en ello";
-        }
-        private void Button_Click_12(object sender, RoutedEventArgs e)
-        {
-
-        }
-        #endregion
-
-        #region Ejercicio 13
-        private void Ejercicio13_MouseEnter(object sender, MouseEventArgs e)
-        {
-            tbk_informacionejercicio.Text = "Estamos trabajando en ello";
-        }
-        private void Button_Click_13(object sender, RoutedEventArgs e)
-        {
-
-        }
-        #endregion
-
-        #region Ejercicio 14
-        private void Ejercicio14_MouseEnter(object sender, MouseEventArgs e)
-        {
-            tbk_informacionejercicio.Text = "Estamos trabajando en ello";
-        }
-        private void Button_Click_14(object sender, RoutedEventArgs e)
-        {
-
-        }
-        #endregion
-
-        #region Ejercicio 15
-        private void Ejercicio15_MouseEnter(object sender, MouseEventArgs e)
-        {
-            tbk_informacionejercicio.Text = "Estamos trabajando en ello";
-        }
-        private void Button_Click_15(object sender, RoutedEventArgs e)
-        {
-
-        }
-        #endregion
-
-        #region Ejercicio 16
-        private void Ejercicio16_MouseEnter(object sender, MouseEventArgs e)
-        {
-            tbk_informacionejercicio.Text = "Estamos trabajando en ello";
-        }
-        private void Button_Click_16(object sender, RoutedEventArgs e)
-        {
-
-        }
-        #endregion
-
-        #region Ejercicio 17
-        private void Ejercicio17_MouseEnter(object sender, MouseEventArgs e)
-        {
-            tbk_informacionejercicio.Text = "Estamos trabajando en ello";
-        }
-        private void Button_Click_17(object sender, RoutedEventArgs e)
-        {
-
-        }
-        #endregion
-
-        #region Ejercicio 18
-        private void Ejercicio18_MouseEnter(object sender, MouseEventArgs e)
-        {
-            tbk_informacionejercicio.Text = "Estamos trabajando en ello";
-        }
-        private void Button_Click_18(object sender, RoutedEventArgs e)
-        {
-
-        }
-        #endregion
-
-        #region Ejercicio 19
-        private void Ejercicio19_MouseEnter(object sender, MouseEventArgs e)
-        {
-            tbk_informacionejercicio.Text = "Estamos trabajando en ello";
-        }
-        private void Button_Click_19(object sender, RoutedEventArgs e)
-        {
-
-        }
-        #endregion
-
-        #region Ejercicio 20
-        private void Ejercicio20_MouseEnter(object sender, MouseEventArgs e)
-        {
-            tbk_informacionejercicio.Text = "Estamos trabajando en ello";
-        }
-        private void Button_Click_20(object sender, RoutedEventArgs e)
-        {
-
-        }
-        #endregion
-
-        #region Ejercicio 21
-        private void Ejercicio21_MouseEnter(object sender, MouseEventArgs e)
-        {
-            tbk_informacionejercicio.Text = "Estamos trabajando en ello";
-        }
-        private void Button_Click_21(object sender, RoutedEventArgs e)
-        {
-
-        }
-        #endregion
-
-        #region Ejercicio 22
-        private void Ejercicio22_MouseEnter(object sender, MouseEventArgs e)
-        {
-            tbk_informacionejercicio.Text = "Estamos trabajando en ello";
-        }
-        private void Button_Click_22(object sender, RoutedEventArgs e)
-        {
-
-        }
-        #endregion
-
-        #region Ejercicio 23
-        private void Ejercicio23_MouseEnter(object sender, MouseEventArgs e)
-        {
-            tbk_informacionejercicio.Text = "Estamos trabajando en ello";
-        }
-        private void Button_Click_23(object sender, RoutedEventArgs e)
-        {
-
-        }
-        #endregion
-
-        #region Ejercicio 24
-        private void Ejercicio24_MouseEnter(object sender, MouseEventArgs e)
-        {
-            tbk_informacionejercicio.Text = "Estamos trabajando en ello";
-        }
-        private void Button_Click_24(object sender, RoutedEventArgs e)
-        {
-
-        }
-        #endregion
-
-        #region Ejercicio 25
-        private void Ejercicio25_MouseEnter(object sender, MouseEventArgs e)
-        {
-            tbk_informacionejercicio.Text = "Estamos trabajando en ello";
-        }
-        private void Button_Click_25(object sender, RoutedEventArgs e)
-        {
-
-        }
-        #endregion
-
-        #region Ejercicio 26
-        private void Ejercicio26_MouseEnter(object sender, MouseEventArgs e)
-        {
-            tbk_informacionejercicio.Text = "Estamos trabajando en ello";
-        }
-        private void Button_Click_26(object sender, RoutedEventArgs e)
-        {
-
-        }
-        #endregion
-
-        #region Ejercicio 27
-        private void Ejercicio27_MouseEnter(object sender, MouseEventArgs e)
-        {
-            tbk_informacionejercicio.Text = "Estamos trabajando en ello";
-        }
-        private void Button_Click_27(object sender, RoutedEventArgs e)
-        {
-
-        }
-        #endregion
-
-        private void Ejercicios_MouseLeave(object sender, MouseEventArgs e)
+        void evento_ratonSaliendoEjercicios(object sender, MouseEventArgs e)
         {
             tbk_informacionejercicio.Text = string.Empty;
         }
-
-        private void Hyperlink_RequestNavigate_1(object sender, RequestNavigateEventArgs e)
+        void evento_ratonEntrandoEjercicios(object sender, MouseEventArgs e)
         {
-            Process.Start(new ProcessStartInfo(e.Uri.AbsoluteUri));
-            //e.Handled = true;
+            string nombreBoton = ((Button)sender).Content.ToString();
+            switch (nombreBoton)
+            {
+                case "Ejercicio 1":
+                    tbk_informacionejercicio.Text = "Calcula la suma de los \"N\" primeros números.";
+                    break;
+                case "Ejercicio 2":
+                    tbk_informacionejercicio.Text = "Permite evaluar una expresión matemática simple con los operadores: \"+\" , \"-\" , \"*\" , \"/\".\nNO tiene en cuenta la prioridad de operadores, solo el orden.";
+                    break;
+                case "Ejercicio 3":
+                    tbk_informacionejercicio.Text = "Adivina en el menor número de intentos posibles un número generado aleatoriamente entre 1 y 100.";
+                    break;
+                case "Ejercicio 4":
+                    tbk_informacionejercicio.Text = "Calcula la suma total de los números que hay entre un número inicial y otro final.";
+                    break;
+                case "Ejercicio 5":
+                    tbk_informacionejercicio.Text = "Puedes introducir una frase y un valor de desplazamiento para encriptar (De 0 a 9), basándose en este valor encriptará la frase y también hará el proceso inverso para desencriptarla.";
+                    break;
+                case "Ejercicio 6":
+                    tbk_informacionejercicio.Text = "Reloj digital que se puede parar y reanudar";
+                    break;
+                case "Ejercicio 7":
+                    tbk_informacionejercicio.Text = "Multipliación de una matriz 3x1 por otra 1x3";
+                    break;
+                case "Ejercicio 8":
+                    tbk_informacionejercicio.Text = "Programa con dos pestañas, la primera comprueba si una frase es palíndroma, la segunda muestra todos los números primos menores al número introducido";
+                    break;
+                case "Ejercicio 9":
+                    tbk_informacionejercicio.Text = "Simulador de tiradas de dados, muestra los resultados y los porcentajes de cada número.";
+                    break;
+                case "Ejercicio 12":
+                    tbk_informacionejercicio.Text = "Programa que muestra de forma visual una combinación de colores.";
+                    break;
+                case "Ejercicio 13":
+                    tbk_informacionejercicio.Text = "Editor de texto con formato RTF, permite manipular archivos, guardarlos y cargarlos.";
+                    break;
+                case "Ejercicio 14":
+                    tbk_informacionejercicio.Text = "Programa que muestra algunas características de un archivo seleccionado.";
+                    break;
+                case "Ejercicio 16":
+                    tbk_informacionejercicio.Text = "Programa que gestiona un fichero binario con datos personales de clientes";
+                    break;
+                case "Ejercicio 18":
+                    tbk_informacionejercicio.Text = "Programa que simula el uso de dos jarras y su contenido, podremos llenarlas, vaciarlas y volcarlas sobre la otra jarra.";
+                    break;
+                case "Ejercicio 20":
+                    tbk_informacionejercicio.Text = "Tres en raya para dos jugadores.";
+                    break;
+                default:
+                    tbk_informacionejercicio.Text = "Estamos trabajando en ello";
+                    break;
+            }
         }
 
-        private void MenuItem_Click_1(object sender, RoutedEventArgs e)
+        //MENU
+        private void evento_clickMenuGitHub(object sender, RequestNavigateEventArgs e)
+        {
+            Process.Start(new ProcessStartInfo(e.Uri.AbsoluteUri));
+        }
+        private void evento_clickMenuAcercaDe(object sender, RoutedEventArgs e)
         {
             AcercaDe v = new AcercaDe();
             v.ShowDialog();
         }
-
 
     }
 }

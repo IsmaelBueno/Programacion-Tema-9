@@ -10,23 +10,21 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
 using System.Windows.Shapes;
-//------------------------------------------------
+//----------------------------------
 using System.Text.RegularExpressions;
 
-namespace Ejercicio6
+namespace MenuPrincipalEjercicios
 {
     /// <summary>
-    /// Lógica de interacción para MainWindow.xaml
+    /// Lógica de interacción para VentanaEjercicio7.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class VentanaEjercicio7 : Window
     {
-        public MainWindow()
+        public VentanaEjercicio7()
         {
             InitializeComponent();
         }
-
         private void Calcular_Click(object sender, RoutedEventArgs e)
         {
             try
@@ -60,3 +58,4 @@ namespace Ejercicio6
         }
     }
 }
+

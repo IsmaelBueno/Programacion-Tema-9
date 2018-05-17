@@ -1,0 +1,34 @@
+﻿<Window x:Class="MenuPrincipalEjercicios.VtnPaletaColores"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Paleta de colores" Height="300" Width="373"
+        ResizeMode="NoResize">
+    <Grid>
+        <Rectangle x:Name="rct_colorPaleta" Fill="Black" HorizontalAlignment="Left" Height="100" Margin="28,24,0,0" Stroke="Black" VerticalAlignment="Top" Width="190"/>
+
+        <Label Content="Rojo" HorizontalAlignment="Left" Margin="28,161,0,0" VerticalAlignment="Top" FontWeight="Bold"/>
+        <Label Content="Verde" HorizontalAlignment="Left" Margin="28,192,0,0" VerticalAlignment="Top" FontWeight="Bold"/>
+        <Label Content="Azul" HorizontalAlignment="Left" Margin="29,223,0,0" VerticalAlignment="Top" FontWeight="Bold"/>
+
+        <Slider HorizontalAlignment="Left" Margin="75,169,0,0" VerticalAlignment="Top" Width="259" Maximum="25.5" ValueChanged="evento_color_rojo"/>
+        <Slider HorizontalAlignment="Left" Margin="75,200,0,0" VerticalAlignment="Top" Width="259" Maximum="25.5" ValueChanged="evento_color_verde"/>
+        <Slider HorizontalAlignment="Left" Margin="75,231,0,0" VerticalAlignment="Top" Width="259" Maximum="25.5" ValueChanged="evento_color_azul"/>
+
+        <Button Content="Aplicar sobre:" HorizontalAlignment="Left" Margin="237,59,0,0" VerticalAlignment="Top" Width="83" Click="btn_paletaColroes_aplicar"/>
+
+        <ComboBox x:Name="cbx_ColorCambiar" HorizontalAlignment="Left" Margin="237,84,0,0" VerticalAlignment="Top" Width="97" SelectedIndex="0">
+            <ComboBoxItem Content="Color 1"/>
+            <ComboBoxItem Content="Color 2"/>
+            <ComboBoxItem Content="Color 3"/>
+            <ComboBoxItem Content="Color 4"/>
+            <ComboBoxItem Content="Color 5"/>
+
+            <ComboBoxItem Content="Color 6"/>
+            <ComboBoxItem Content="Color 7"/>
+            <ComboBoxItem Content="Color 8"/>
+            <ComboBoxItem Content="Color 9"/>
+            <ComboBoxItem Content="Color 10"/>
+        </ComboBox>
+    </Grid>
+</Window>
+

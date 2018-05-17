@@ -35,13 +35,13 @@ namespace MenuPrincipalEjercicios
         public VentanaEjercicio9()
         {
             InitializeComponent();
-            ObtenerRutasImagenes();
 
         }
 
-        private void ObtenerRutasImagenes()
+        //Obtener ruta de las imagenes
+        private void Window_Initialized_1(object sender, EventArgs e)
         {
-            rutas = Directory.GetFiles("../../imagenes/");           
+            rutas = Directory.GetFiles("../../imagenes/");  
         }
         private void tbx_nTiradas_PreviewTextInput(object sender, TextCompositionEventArgs e)
         {
@@ -105,7 +105,7 @@ namespace MenuPrincipalEjercicios
             //Para el seis
             tmp = (double)seis / (double)totalTiradas * 100;
             lbl_estadistica6.Content = Math.Round(tmp, 2);
-#endregion
+        #endregion
         }
 
         //Una tirada, la imagen cambia

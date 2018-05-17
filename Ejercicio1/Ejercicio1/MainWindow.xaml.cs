@@ -43,10 +43,5 @@ namespace Ejercicio1
         {
             Close();
         }
-
-        private void tbx_numero_TextChanged(object sender, TextChangedEventArgs e)
-        {
-
-        }
     }
 }

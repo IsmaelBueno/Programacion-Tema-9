@@ -56,11 +56,31 @@
     <Compile Include="AcercaDe.xaml.cs">
       <DependentUpon>AcercaDe.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Cliente.cs" />
+    <Compile Include="Jarra.cs" />
     <Compile Include="VentanaEjercicio1.xaml.cs">
       <DependentUpon>VentanaEjercicio1.xaml</DependentUpon>
     </Compile>
+    <Compile Include="VentanaEjercicio12.xaml.cs">
+      <DependentUpon>VentanaEjercicio12.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="VentanaEjercicio13.xaml.cs">
+      <DependentUpon>VentanaEjercicio13.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="VentanaEjercicio14.xaml.cs">
+      <DependentUpon>VentanaEjercicio14.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="VentanaEjercicio16.xaml.cs">
+      <DependentUpon>VentanaEjercicio16.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="VentanaEjercicio18.xaml.cs">
+      <DependentUpon>VentanaEjercicio18.xaml</DependentUpon>
+    </Compile>
     <Compile Include="VentanaEjercicio2.xaml.cs">
       <DependentUpon>VentanaEjercicio2.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="VentanaEjercicio20.xaml.cs">
+      <DependentUpon>VentanaEjercicio20.xaml</DependentUpon>
     </Compile>
     <Compile Include="VentanaEjercicio3.xaml.cs">
       <DependentUpon>VentanaEjercicio3.xaml</DependentUpon>
@@ -71,8 +91,32 @@
     <Compile Include="VentanaEjercicio5.xaml.cs">
       <DependentUpon>VentanaEjercicio5.xaml</DependentUpon>
     </Compile>
+    <Compile Include="VentanaEjercicio6.xaml.cs">
+      <DependentUpon>VentanaEjercicio6.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="VentanaEjercicio7.xaml.cs">
+      <DependentUpon>VentanaEjercicio7.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="VentanaEjercicio8.xaml.cs">
+      <DependentUpon>VentanaEjercicio8.xaml</DependentUpon>
+    </Compile>
     <Compile Include="VentanaEjercicio9.xaml.cs">
       <DependentUpon>VentanaEjercicio9.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ventana_editarCliente.xaml.cs">
+      <DependentUpon>ventana_editarCliente.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="VtnPaletaColores.xaml.cs">
+      <DependentUpon>VtnPaletaColores.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="vtn_anadirCliente.xaml.cs">
+      <DependentUpon>vtn_anadirCliente.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="vtn_borrarCliente.xaml.cs">
+      <DependentUpon>vtn_borrarCliente.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="vtn_ListarClientes.xaml.cs">
+      <DependentUpon>vtn_ListarClientes.xaml</DependentUpon>
     </Compile>
     <Page Include="AcercaDe.xaml">
       <SubType>Designer</SubType>
@@ -94,7 +138,31 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="VentanaEjercicio12.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="VentanaEjercicio13.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="VentanaEjercicio14.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="VentanaEjercicio16.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="VentanaEjercicio18.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="VentanaEjercicio2.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="VentanaEjercicio20.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -110,7 +178,39 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="VentanaEjercicio6.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="VentanaEjercicio7.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="VentanaEjercicio8.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="VentanaEjercicio9.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ventana_editarCliente.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="VtnPaletaColores.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="vtn_anadirCliente.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="vtn_borrarCliente.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="vtn_ListarClientes.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -152,6 +252,17 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="imagenes\acercade.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="iconos\reloj.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="iconos\lupa.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="imagenes\bugfixed.png" />
+    <Resource Include="imagenes\circulo.png" />
+    <Resource Include="imagenes\equis.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
