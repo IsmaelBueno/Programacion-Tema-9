@@ -1,0 +1,14 @@
+﻿<Window x:Class="Ejercicio7.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Ejercicio 7" Height="260" Width="500"
+        ResizeMode="NoResize" Initialized="evento_iniciarPrograma" Icon="reloj.ico">
+    <Grid Background="Black">
+        <Label x:Name="lbl_reloj" Content="00:00:00" HorizontalAlignment="Right" Margin="0,43,39,0" VerticalAlignment="Top" BorderBrush="White" BorderThickness="3" Foreground="White" FontSize="70" Width="278"/>
+        <Button x:Name="btn_marcha" Content="Marcha" HorizontalAlignment="Left" Margin="43,49,0,0" VerticalAlignment="Top" Width="84" FontSize="20" IsEnabled="False" Click="evento_btn_marcha"/>
+        <Button x:Name="btn_paro" Content="Paro" HorizontalAlignment="Left" Margin="43,85,0,0" VerticalAlignment="Top" Width="84" FontSize="20" Click="evento_btn_paro"/>
+        <Button Content="Salir" HorizontalAlignment="Left" Margin="43,121,0,0" VerticalAlignment="Top" Width="84" FontSize="20" Click="evento_btn_salir"/>
+        <Label x:Name="lbl_fechaLarga" HorizontalAlignment="Center" Margin="177,0,39,20" VerticalAlignment="Bottom" Foreground="White" FontSize="15" Width="278" Height="28" FlowDirection="RightToLeft"/>
+
+    </Grid>
+</Window>
