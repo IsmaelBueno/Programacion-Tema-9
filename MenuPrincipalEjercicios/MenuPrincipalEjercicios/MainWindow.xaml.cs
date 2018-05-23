@@ -135,6 +135,10 @@ namespace MenuPrincipalEjercicios
                     VentanaEjercicio20 v20 = new VentanaEjercicio20();
                     v20.ShowDialog();
                     break;
+                case "Ejercicio 22":
+                    VentanaEjercicio22 v22 = new VentanaEjercicio22();
+                    v22.ShowDialog();
+                    break;
                 case "Ejercicio 27":
                     VentanaEjercicio27 v27 = new VentanaEjercicio27();
                     v27.ShowDialog();
@@ -196,6 +200,9 @@ namespace MenuPrincipalEjercicios
                     break;
                 case "Ejercicio 20":
                     tbk_informacionejercicio.Text = "Tres en raya para dos jugadores.";
+                    break;
+                case "Ejercicio 22":
+                    tbk_informacionejercicio.Text = "Aplicación que permite imprimir cheques bancarios (Hecho con enlaces de datos).";
                     break;
                 case "Ejercicio 27":
                     tbk_informacionejercicio.Text = "Sudoku.";

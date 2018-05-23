@@ -58,7 +58,9 @@
     </Compile>
     <Compile Include="Cliente.cs" />
     <Compile Include="Jarra.cs" />
+    <Compile Include="Notificador.cs" />
     <Compile Include="Sudoku.cs" />
+    <Compile Include="Talon.cs" />
     <Compile Include="VentanaEjercicio1.xaml.cs">
       <DependentUpon>VentanaEjercicio1.xaml</DependentUpon>
     </Compile>
@@ -82,6 +84,9 @@
     </Compile>
     <Compile Include="VentanaEjercicio20.xaml.cs">
       <DependentUpon>VentanaEjercicio20.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="VentanaEjercicio22.xaml.cs">
+      <DependentUpon>VentanaEjercicio22.xaml</DependentUpon>
     </Compile>
     <Compile Include="VentanaEjercicio27.xaml.cs">
       <DependentUpon>VentanaEjercicio27.xaml</DependentUpon>
@@ -170,6 +175,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="VentanaEjercicio20.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="VentanaEjercicio22.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -287,6 +296,12 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="soluciones.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="imagenes\cheque.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="iconos\euro.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
