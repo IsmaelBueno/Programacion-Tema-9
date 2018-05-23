@@ -88,6 +88,9 @@
     <Compile Include="VentanaEjercicio22.xaml.cs">
       <DependentUpon>VentanaEjercicio22.xaml</DependentUpon>
     </Compile>
+    <Compile Include="VentanaEjercicio25.xaml.cs">
+      <DependentUpon>VentanaEjercicio25.xaml</DependentUpon>
+    </Compile>
     <Compile Include="VentanaEjercicio27.xaml.cs">
       <DependentUpon>VentanaEjercicio27.xaml</DependentUpon>
     </Compile>
@@ -123,6 +126,9 @@
     </Compile>
     <Compile Include="vtn_borrarCliente.xaml.cs">
       <DependentUpon>vtn_borrarCliente.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="vtn_Imagen.xaml.cs">
+      <DependentUpon>vtn_Imagen.xaml</DependentUpon>
     </Compile>
     <Compile Include="vtn_ListarClientes.xaml.cs">
       <DependentUpon>vtn_ListarClientes.xaml</DependentUpon>
@@ -182,6 +188,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="VentanaEjercicio25.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="VentanaEjercicio27.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -227,6 +237,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="vtn_borrarCliente.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="vtn_Imagen.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -302,6 +316,13 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="iconos\euro.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="imagenesVisor\1nelson.jpg" />
+    <Resource Include="imagenesVisor\2arthas.jpg" />
+    <Resource Include="imagenesVisor\3sylvannas.jpg" />
+    <Resource Include="imagenesVisor\4porodarius.jpg" />
+    <Resource Include="imagenesVisor\5cubone.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
